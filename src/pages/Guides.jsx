@@ -146,20 +146,12 @@ const Guides = ({ user, onUpgrade, onOpenAuthModal }) => {
               <h3> Дополнительные преимущества подписки:</h3>
               <div className="benefits-list">
                 <div className="benefit">
-                  <span>📱</span>
-                  <p>Доступ на всех устройствах</p>
-                </div>
-                <div className="benefit">
                   <span>🔄</span>
                   <p>Регулярные обновления</p>
                 </div>
                 <div className="benefit">
                   <span>💬</span>
                   <p>Поддержка в Discord</p>
-                </div>
-                <div className="benefit">
-                  <span>🎮</span>
-                  <p>Эксклюзивные советы</p>
                 </div>
               </div>
             </div>

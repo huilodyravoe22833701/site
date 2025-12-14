@@ -180,7 +180,7 @@ body {
 
 /* Заголовки */
 h1 {
-    color: #ff6600;
+    color: #ffffff;
     font-size: 2.5rem;
     margin-top: 0;
 }
@@ -585,5 +585,59 @@ backdrop-filter: blur(5px);
 .popular-guides a:active {
     transform: translateX(6px);
     transition: transform 0.1s;
+}
+/* Стили для вкладки с выпадающим списком на одном уровне */
+.nav-item-with-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item-with-dropdown .nav-link {
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 60px; /* или как у других вкладок */
+}
+
+/* Выпадающий список для достижений */
+.achievements-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* под вкладкой */
+  left: 0;
+  background-color: #333; /* или ваш цвет фона */
+  min-width: 180px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.achievements-dropdown.show {
+  display: block;
+}
+
+.achievements-dropdown .dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.achievements-dropdown .dropdown-item:hover {
+  background-color: #444;
+}
+
+.achievements-dropdown .dropdown-item .achievement-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.achievements-dropdown .dropdown-item span {
+  font-size: 14px;
+  font-weight: bold;
 }
 

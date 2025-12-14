@@ -7,14 +7,12 @@ const Header = ({
   user, 
   onLogin, 
   onLogout,
-  authModalOpen, // Убираем useState отсюда
+  authModalOpen,
   setAuthModalOpen,
   onOpenAuthModal 
 }) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [achievementsDropdownOpen, setAchievementsDropdownOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
-
-  // УБРАТЬ ЭТУ СТРОКУ: const [authModalOpen, setAuthModalOpen] = useState(false);
 
   return (
     <>
@@ -34,29 +32,30 @@ const Header = ({
               ГЛАВНАЯ
             </NavLink>
             
+            {/* ВКЛАДКА С ВЫПАДАЮЩИМ СПИСКОМ - ВСЕ НА ОДНОМ УРОВНЕ */}
             <div 
-              className="dropdown"
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
+              className="nav-item-with-dropdown"
+              onMouseEnter={() => setAchievementsDropdownOpen(true)}
+              onMouseLeave={() => setAchievementsDropdownOpen(false)}
             >
               <NavLink 
                 to="/achievements" 
-                className={({ isActive }) => `nav-link dropdown-btn ${isActive ? 'active' : ''}`}
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
               >
-                ДОСТИЖЕНИЯ 
+                ДОСТИЖЕНИЯ
               </NavLink>
               
-              <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-                <NavLink to="/achievements#easy" className="achievement-link">
-                  <img src="img/img/easy-icon.png" alt="" className="achievement-icon" />
+              <div className={`achievements-dropdown ${achievementsDropdownOpen ? 'show' : ''}`}>
+                <NavLink to="/achievements#easy" className="dropdown-item">
+                  <img src="img/img/easy-icon.png" alt="Легкие" className="achievement-icon" />
                   <span>EASY</span>
                 </NavLink>
-                <NavLink to="/achievements#medium" className="achievement-link">
-                  <img src="img/img/medium-icon.png" alt="" className="achievement-icon" />
+                <NavLink to="/achievements#medium" className="dropdown-item">
+                  <img src="img/img/medium-icon.png" alt="Средние" className="achievement-icon" />
                   <span>MEDIUM</span>
                 </NavLink>
-                <NavLink to="/achievements#hard" className="achievement-link">
-                  <img src="img/img/hard-icon.png" alt="" className="achievement-icon" />
+                <NavLink to="/achievements#hard" className="dropdown-item">
+                  <img src="img/img/hard-icon.png" alt="Сложные" className="achievement-icon" />
                   <span>HARD</span>
                 </NavLink>
               </div>

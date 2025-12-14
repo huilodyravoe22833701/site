@@ -12,7 +12,7 @@ const PremiumGuidesLock = ({ user, onUpgrade, onOpenAuthModal }) => {
       title: "Изысканная конвекция",
       description: "Как взорвать запеканку в микроволновке",
       icon: "img/img/microwave.jpg",
-      locked: false 
+      locked: true 
     },
     {
       id: 2,
@@ -51,7 +51,7 @@ const PremiumGuidesLock = ({ user, onUpgrade, onOpenAuthModal }) => {
   return (
     <div className="premium-guides-lock">
       <div className="lock-header">
-        <div className="lock-icon">🔒</div>
+        <div className="lock-icon">❕</div>
         <h2>Премиум руководства</h2>
         <p className="subtitle">Полный доступ ко всем руководствам</p>
       </div>
@@ -64,7 +64,7 @@ const PremiumGuidesLock = ({ user, onUpgrade, onOpenAuthModal }) => {
             <div key={guide.id} className={`guide-preview-card ${guide.locked ? 'locked' : ''}`}>
               <div className="guide-icon">
                 <img src={guide.icon} alt={guide.title} />
-                {guide.locked && <div className="lock-overlay">🔒</div>}
+                {guide.locked && <div className="lock-overlay">❕</div>}
               </div>
               <h4>{guide.title}</h4>
               <p>{guide.description}</p>
