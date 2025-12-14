@@ -1,0 +1,117 @@
+/* pages/Subscribe.css */
+.subscription-options {
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.subscription-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 2px solid #ff6600;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  margin-bottom: 25px;
+}
+
+.card-header h3 {
+  color: #ffcc00;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 1.2rem;
+  color: #aaa;
+  font-weight: normal;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.features li {
+  color: #ddd;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  font-size: 1rem;
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+.subscribe-btn {
+  background: linear-gradient(to right, #ffcc00, #ff9900);
+  color: #000;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.subscribe-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+}
+
+.payment-info {
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+  border: 1px solid #4CAF50;
+}
+
+.payment-info h3 {
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.payment-info p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.payment-info a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.payment-info a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .subscription-card {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+  }
+}

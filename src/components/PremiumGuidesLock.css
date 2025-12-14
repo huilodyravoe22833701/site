@@ -1,0 +1,373 @@
+/* components/PremiumGuidesLock.css */
+.premium-guides-lock {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.lock-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.lock-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.lock-header h2 {
+  color: #ffcc00;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.preview-section {
+  margin: 40px 0;
+}
+
+.preview-section h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.guides-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.guide-preview-card {
+  background: #252525;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #444;
+}
+
+.guide-preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.guide-preview-card.locked {
+  opacity: 0.7;
+  position: relative;
+}
+
+.guide-preview-card.locked::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.guide-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  position: relative;
+}
+
+.guide-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #444;
+}
+
+.lock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.guide-preview-card h4 {
+  color: #fff;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide-preview-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  min-height: 60px;
+}
+
+.free-badge, .premium-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.free-badge {
+  background: #4CAF50;
+  color: white;
+}
+
+.premium-badge {
+  background: linear-gradient(to right, #ff6600, #ff8c00);
+  color: #000;
+}
+
+.upgrade-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 15px;
+  padding: 30px;
+  border: 2px solid #ff6600;
+  text-align: center;
+}
+
+.pricing-card {
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+.plan-header {
+  margin-bottom: 25px;
+}
+
+.plan-header h3 {
+  color: #ffcc00;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 1.2rem;
+  color: #aaa;
+  font-weight: normal;
+}
+
+.billing {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.plan-features li {
+  color: #ddd;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  font-size: 1rem;
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+.plan-features strong {
+  color: #ffcc00;
+}
+
+.upgrade-btn {
+  background: linear-gradient(to right, #ffcc00, #ff9900);
+  color: #000;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.upgrade-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+}
+
+.guarantee {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.guarantee p {
+  color: #4CAF50;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 4px;
+}
+
+.current-status {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.status {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.status.free {
+  background: #666;
+  color: #fff;
+}
+
+.status.premium {
+  background: linear-gradient(to right, #ff6600, #ff8c00);
+  color: #000;
+}
+
+.status.ultimate {
+  background: linear-gradient(to right, #9c27b0, #673ab7);
+  color: white;
+}
+
+.trial-btn {
+  background: transparent;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.trial-btn:hover {
+  background: rgba(76, 175, 80, 0.2);
+}
+
+.login-prompt {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.login-btn {
+  background: #ff6600;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.login-btn:hover {
+  background: #ff8c00;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .guides-preview {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+  }
+  
+  .guarantee {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* В конец PremiumGuidesLock.css */
+.login-btn {
+  background: linear-gradient(to right, #ff6600, #ff8c00);
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 15px;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.login-btn:hover {
+  background: linear-gradient(to right, #ff8c00, #ff6600);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+}
+
+/* В Subscribe.css */
+.login-required {
+  background: rgba(255, 102, 0, 0.1);
+  border: 2px solid #ff6600;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 500px;
+}
+
+.login-required p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}

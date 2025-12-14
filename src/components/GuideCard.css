@@ -1,0 +1,174 @@
+/* components/GuideCard.css */
+.guide-card {
+  background: #252525;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #333;
+  transition: all 0.3s;
+}
+
+.guide-card:hover {
+  border-color: #ff6600;
+  box-shadow: 0 5px 20px rgba(255, 102, 0, 0.2);
+}
+
+.guide-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.guide-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ff6600;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.guide-info {
+  flex: 1;
+}
+
+.guide-info h3 {
+  color: #ff6600;
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+}
+
+.guide-description {
+  color: #aaa;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+}
+
+.guide-meta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.difficulty {
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.time, .chapter {
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.expand-btn {
+  background: #ff6600;
+  color: #000;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.expand-btn:hover {
+  background: #ff8c00;
+  transform: scale(1.1);
+}
+
+.guide-content {
+  padding: 30px;
+  border-top: 1px solid #333;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.guide-content h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.steps {
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.steps li {
+  margin-bottom: 10px;
+}
+
+.guide-images {
+  margin-top: 30px;
+}
+
+.guide-images h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.guide-image {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #444;
+  transition: transform 0.3s;
+}
+
+.guide-image:hover {
+  transform: scale(1.05);
+  border-color: #ff6600;
+}
+
+.guide-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #ff6600, #ff8c00);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.premium-tag {
+  padding: 5px 15px;
+  background: linear-gradient(to right, #ff6600, #ff8c00);
+  color: #000;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}

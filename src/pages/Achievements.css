@@ -1,0 +1,76 @@
+/* Achievements.css */
+.achievement-stats {
+  background: rgba(255, 102, 0, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border-left: 3px solid #ff6600;
+}
+
+.achievement-stats p {
+  margin: 5px 0;
+  color: #aaa;
+}
+
+.achievement-stats strong {
+  color: #ff6600;
+}
+
+.total-stats {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+  border: 2px solid #333;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #252525;
+  border-radius: 6px;
+}
+
+.stat-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.stat-value {
+  color: #ff6600;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.completion-tip {
+  background: rgba(76, 175, 80, 0.1);
+  border-left: 3px solid #4CAF50;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.completion-tip strong {
+  color: #4CAF50;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-section h2 {
+    font-size: 1.5rem;
+  }
+}
